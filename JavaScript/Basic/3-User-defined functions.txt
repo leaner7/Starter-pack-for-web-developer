@@ -1,0 +1,14 @@
+// declare a function
+function sample(param1, param2) {
+console.log(param1 + ' ' + param2);
+}
+
+// invoke a function
+sample('Hello', 'World');
+
+// Function Return
+var x = myFunction(4, 3);        // Function is called, return value will end up in x
+function myFunction(a, b) {
+    return a * b;                // Function returns the product of a and b
+}
+console.log(x);

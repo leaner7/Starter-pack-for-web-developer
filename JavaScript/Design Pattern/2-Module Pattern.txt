@@ -1,0 +1,57 @@
+// MODULE PATTERN
+var testModule = (function () {
+ 
+		  var counter = 0;
+		 
+		  return {
+		 
+		    incrementCounter: function () {
+		      return ++counter;
+		    },
+		 
+		    resetCounter: function () {
+		      console.log( "counter value prior to reset: " + counter );
+		      counter = 0;
+		    }
+		  };
+		 
+		})();
+		 
+		// Usage:
+		 
+		// Increment our counter
+		testModule.incrementCounter();
+		 
+		// Check the counter value and reset
+		testModule.resetCounter();
+		
+// REVEALING MODULE PATTERN
+var myRevealingModule = (function () {
+ 
+    var privateVar = "Tung Pham",
+        publicVar = "Hey there!";
+
+    function privateFunction() {
+        console.log( "Name:" + privateVar );
+    }
+
+    function publicSetName( strName ) {
+        privateVar = strName;
+    }
+
+    function publicGetName() {
+        privateFunction();
+    }
+
+
+    // Reveal public pointers to
+    // private functions and properties
+
+    return {
+        setName: publicSetName,
+        greeting: publicVar,
+        getName: publicGetName
+    };
+ 
+    })();
+myRevealingModule.setName( "Son Tung" );

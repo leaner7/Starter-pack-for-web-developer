@@ -1,0 +1,77 @@
+// use constructor function (case 1)
+function User() 
+{
+    // Properties
+    this.username = '';
+    this.password = '';
+     
+    // Methods
+    this.setInfo = function(username, password){
+        this.username = username;
+        this.password = password;
+    };
+     
+    this.checkLogin = function(){
+        return (this.username === 'admin' && this.password === '@123');
+    };
+}
+
+var user = new User();
+user.setInfo('admin', '@123');
+if (user.checkLogin()){
+    alert('login successful');
+}
+else{
+    alert('login failed');
+}
+
+// use Object (case 2)
+var User = {
+     
+    // Properties
+    username : "",
+    password : "",
+     
+    // Methods
+    setInfo : function(username, password){
+        this.username = username;
+        this.password = password;
+    },
+    checkLogin : function(){
+        return (this.username === 'admin' && this.password === '@123');
+    }
+     
+};
+User.setInfo('admin', '@123');
+if (User.checkLogin()){
+    alert('login successful');
+}
+else{
+    alert('login failed');
+}
+
+// use Singleton Object (case 3)
+var User = new function(){
+     
+     // Properties
+    this.username = '';
+    this.password = '';
+     
+    // Methods
+    this.setInfo = function(username, password){
+        this.username = username;
+        this.password = password;
+    };
+     
+    this.checkLogin = function(){
+        return (this.username === 'admin' && this.password === '@123');
+    };
+     
+};
+User.setInfo('admin', '@123');
+if (User.checkLogin()){
+    alert('login successful');
+}
+else{
+    alert('login failed');
+}

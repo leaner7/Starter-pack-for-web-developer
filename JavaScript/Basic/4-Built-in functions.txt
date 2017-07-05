@@ -1,0 +1,50 @@
+// Window Location Href
+console.log('Page location is' + ' ' + window.location.href);
+
+// Window Location Hostname
+console.log('Host name is' + ' ' + window.location.hostname);
+
+// Window Location Protocol
+console.log('Page protocol is' + ' ' + window.location.protocol);
+
+// Check if cookies are enabled
+console.log("cookiesEnabled is " + navigator.cookieEnabled);
+
+// Alert box
+alert("I am an alert box!");
+
+// Confirm Box
+confirm("Are you sure?");
+
+// Prompt Box
+var person = prompt("Please enter your name", "007");
+
+if (person == null || person == "") {
+    console.log("User cancelled the prompt.");
+} else {
+    console.log("Hello " + person + "! How are you today?");
+}
+
+// The setTimeout() Method
+function myFunction() {
+    alert('Hello');
+}
+setTimeout(myFunction, 3000);
+
+// The setInterval() Method
+function myTimer() {
+    var d = new Date();
+    console.log(d.toLocaleTimeString());
+}
+setInterval(myTimer, 1000);
+
+// Create cookies
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+var cookie = setCookie('username', 'tungps', 1);
+document.cookie;

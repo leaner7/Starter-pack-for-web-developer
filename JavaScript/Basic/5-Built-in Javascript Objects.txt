@@ -1,0 +1,117 @@
+// Objects
+var person = {
+    firstName: "Tung",
+    lastName: "Pham",
+    age: 25,
+	intro: function() {
+		console.log( this.firstName + ' ' + this.lastName + ' is ' + this.age);
+	}
+};
+person.intro();
+
+// Math Object
+console.log(Math.PI); // pi number
+
+console.log(Math.round(4.7)); // 5
+console.log(Math.round(4.4)); // 4
+
+console.log(Math.ceil(4.4)); // 5
+console.log(Math.floor(4.7)); // 4
+
+console.log(Math.pow(8, 2)); // 64
+
+console.log(Math.sqrt(64)); // 8
+
+console.log(Math.abs(-4.7)); // 4.7
+
+console.log(Math.min(0, 150, 30, 20, -8, -200)); // -200
+console.log (Math.max(0, 150, 30, 20, -8, -200)); // 150
+
+console.log(Math.random());
+
+// Dates 
+
+console.log(Date()); // current date and time
+
+var d = new Date(86400000*365); // zero time plus the number
+console.log(d);
+
+var d = new Date(99, 5, 24, 11, 33, 30, 0); // year, month, day, hour, minute, second, and millisecond in order
+console.log(d);
+
+// String 
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var sln = txt.length; // string's length
+
+console.log('It\'s alright');    // Avoid special characters
+console.log("We are the so-called \"Vikings\" from the north.");
+
+var str = "Please locate where 'locate' occurs!";
+console.log(str.indexOf("locate")); // index of the first occurrence of a specified text in a string
+console.log(str.lastIndexOf("locate")); // index of the last occurrence of a specified text in a string
+
+var str = "Apple, Banana, Kiwi";
+
+console.log(str.substr(7, 6)); // Banana
+
+var text1 = "Hello";
+
+var text2 = "World";
+
+console.log(text1.concat(" ", text2)); // concatenate multiple strings
+
+// Number 
+console.log(34.00);    // A number with decimals
+console.log(34);       // A number without decimals
+console.log(123e5);    // 12300000
+console.log(123e-5);   // 0.00123
+console.log(0xFF);    // Hexadecimal
+
+var myNumber = 128;
+myNumber.toString(16);     // returns 80
+myNumber.toString(8);      // returns 200
+myNumber.toString(2);      // returns 10000000
+
+// NaN - Not a Number
+console.log(100 / "Apple"); // NaN
+console.log(100 / "10"); // 10
+
+var x = 100 / "Apple";
+isNaN(x);   // returns true because x is Not a Number
+
+var x = NaN;
+var y = 5;
+console.log(x + y); // NaN
+
+var x = NaN;
+var y = "5";
+console.log(x + y); // NaN5
+
+typeof NaN; // returns "number"
+
+// Arrays
+var x = []; // declare new array
+var cars = ["Saab", "Volvo", "BMW"];
+console.log(cars[0]); // first element
+console.log(cars); // all elements
+cars.length; // array's length
+
+cars.push("Toyota"); // add new element
+console.log(cars);
+
+Array.isArray(cars);     // returns true
+
+// Booleans
+Boolean(10 > 9) // true
+Boolean(9 > 10) // false
+Boolean("false") // true
+Boolean(-15) // true
+Boolean(0) // false
+Boolean("") // false
+var x;
+Boolean(x) // undefined false
+var x = null;
+Boolean(x) // null is false
+Boolean(false) // false
+var x = 10 / "H";
+Boolean(x); // NaN is false

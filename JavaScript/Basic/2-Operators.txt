@@ -1,0 +1,20 @@
+txt1 = "John";
+txt2 = "Doe";
+txt3 = txt1 + " " + txt2;
+console.log(txt3);
+
+// Arithmetic Operators
+x = 5 + 5;
+y = "5" + 5;
+z = "Hello" + 5;
+console.log(x);
+console.log(y);
+console.log(z);
+
+// Comparison and Logical Operators
+var age = 15;
+var voteable = (age < 18) ? "Too young":"Old enough";
+console.log(voteable);
+
+//typeof operator
+alert(typeof age);

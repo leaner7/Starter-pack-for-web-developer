@@ -1,0 +1,48 @@
+// For loop
+var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+var text = "";
+var i;
+for (i = 0; i < cars.length; i++) {
+    text += cars[i] + " ";
+}
+console.log(text);
+
+// For/In Loop
+var person = {fname:"John", lname:"Doe", age:25}; 
+
+var properties = "";
+var values = "";
+var x;
+for (x in person) {
+	properties += ' ' + x;
+    values += ' ' + person[x];
+}
+console.log(properties);
+console.log(values);
+
+// While Loop
+var i = 0;
+while (i < 10) {
+    console.log("The number is " + i);
+    i++;
+}
+
+// Do/While Loop
+var i = 0;
+do {
+    console.log("The number is " + i);
+    i++;
+}
+while (i < 10);
+
+// Break statement
+for (i = 0; i < 10; i++) {
+    if (i === 3) { break; }
+    console.log("The number is " + i);
+}
+
+// Continue Statement
+for (i = 0; i < 10; i++) {
+    if (i === 3) { continue; }
+    console.log("The number is " + i);
+}

@@ -1,0 +1,16 @@
+function Person(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+
+  this.fullName = function() {
+    return this.firstName + ' ' + this.lastName;
+  };
+}
+
+// Use it like this
+var tung = new Person('tung', 'pham');
+tung.firstName;    // "tung"
+tung.fullName();   // "tung pham"
+
+tung.firstName = 'son tung';
+tung.fullName(); 

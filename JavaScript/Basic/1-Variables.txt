@@ -1,0 +1,16 @@
+// Variable declaration
+var gameName; // case 1
+gameName = "Grand Thief Auto V"; // case 2
+var gameName = "Grand Thief Auto V"; // case 3
+
+// Data Types
+var number = 3; // number
+var person = "John Doe"; // string
+var answer = true; // boolean
+var car; // undefined
+
+//Example
+var firstName = "John" 
+	lastName = "Doe" 
+	age = 35;
+console.log(firstName + " " + lastName + " is " + age);
