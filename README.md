@@ -1,3 +1,4 @@
+
 This project will provide you some basic knowledge to help you put your first step in Web Developer path.
 
 # HTML + CSS + JS
@@ -14,3 +15,4 @@ Folder 'Basic' has all code samples for basic knowledge in JS that you need to k
 Folder 'OOP' has code samples for how to create and use a "class" in JS. Please visit this folder after finnishing with 'Basic'
 Folder 'Design Pattern' has code samples for some advance JavaScript knowledge that you might want to know. Since this is some advance JS (according to my opinion).
 I suggest you to check out this one after fully understanding basic JS
+"# Basic HTML-CSS-JS knowledge" 
